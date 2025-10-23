@@ -5,8 +5,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import apple.laf.JRSUIUtils.Tree;
-
 class BinarySearchTreeTest 
 {
 	// use this binary search tree for the smaller trees
@@ -588,7 +586,7 @@ class BinarySearchTreeTest
 			Node n = new Node(keys[i]);
 			tree.insertNode(n);
 		}
-		assertEquals("(15,10,,,1)", tree.getPredeccessor(tree.getRoot()).toString());
+		assertEquals("(15,10,,,1)", tree.getPredecessor(x)(tree.getRoot()).toString());
 	}
 	
 	@Test
@@ -600,7 +598,7 @@ class BinarySearchTreeTest
 	@Test
 	void testGetRoot() 
 	{
-		assertEquals("(50,,25,75,1)", t.getRoot(t.getRoot()).toString());
+		assertEquals("(50,,25,75,1)", t.getRoot()).toString();
 	}
 	
 	@Test
@@ -654,8 +652,7 @@ class BinarySearchTreeTest
 		tree.deleteNode(node);
 		node = tree.getNode(tree.getRoot(), 35);
 		tree.deleteNode(node);
-		assertEquals(2, tree.getNode(tree.getRoot(), 35).getCount()
-);
+		assertEquals(2, tree.getNode(tree.getRoot(), 35).getCount());
 	}
 
 }
