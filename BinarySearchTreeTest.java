@@ -586,7 +586,7 @@ class BinarySearchTreeTest
 			Node n = new Node(keys[i]);
 			tree.insertNode(n);
 		}
-		assertEquals("(15,10,,,1)", tree.getPredecessor(x)(tree.getRoot()).toString());
+		assertEquals("(15,10,,,1)", tree.getPredecessor(tree.getRoot()).toString());
 	}
 	
 	@Test
@@ -598,7 +598,7 @@ class BinarySearchTreeTest
 	@Test
 	void testGetRoot() 
 	{
-		assertEquals("(50,,25,75,1)", t.getRoot()).toString();
+		assertEquals("(50,,25,75,1)", t.getRoot().toString());
 	}
 	
 	@Test
